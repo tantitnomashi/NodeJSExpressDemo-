@@ -20,7 +20,7 @@ var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URL);
 // set view 
 const app = e();
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.set('view engine','pug');
 app.set('views','./views');
 app.use(bodyParser.json()); // for parsing application/json

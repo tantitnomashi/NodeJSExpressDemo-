@@ -6,3 +6,4 @@ module.exports.show = async (req,res)=> {
    console.log(products);
    res.json(products);
 };
+// api use res.json return a json to client 
