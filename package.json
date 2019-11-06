@@ -4,7 +4,8 @@
   "description": "",
   "main": "hello.js",
   "scripts": {
-    "start": "nodemon a.js",
+    "start": "node a.js",
+    "dev": "nodemon --inspect a.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
