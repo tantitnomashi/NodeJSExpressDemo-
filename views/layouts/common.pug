@@ -1,0 +1,29 @@
+html
+    head
+        title Tesla Motor
+        link(rel="stylesheet", href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/styles/custom.css")
+        link(rel="icon", href="/images/icon.png", type="image/x-icon")
+        link(href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap", rel="stylesheet")
+
+    body
+        nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+            a.navbar-brand(href='/') Tesla Motor
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarSupportedContent.collapse.navbar-collapse
+                ul.navbar-nav.mr-auto
+                li.nav-item.active
+                    a.navbar-brand(href='/') Home
+                li.nav-item
+                    a.navbar-brand(href='/users') Users
+                li.nav-item
+                    a.navbar-brand(href='/products/products?page=1') Products
+                li.nav-item
+                    a.navbar-brand(href='/cart') Cart
+                li.nav-item
+                    a.navbar-brand(href='/auth/login')=user? user.name : 'Login'
+                li.nav-item
+                    a.navbar-brand(href='/users/create') Register            
+        .container.pt-5
+            block content   

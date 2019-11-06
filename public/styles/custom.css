@@ -1,0 +1,13 @@
+/* Custom css  code by Tan Tran M.*/
+html{
+    box-sizing: border-box;
+}
+.main-frame {
+    color: black;
+    font-family: 'Nanum Myeongjo', serif;
+    /*background-image: url('/images/bg1.jpg');*/
+}
+.username-nav{
+    color: whitesmoke;
+    font-size: 25px;
+}
