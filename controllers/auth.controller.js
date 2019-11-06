@@ -14,6 +14,7 @@ module.exports.loginP = async (req,res)=> {
    // var user = db.get('users').find({email: email}).value();
 
     var user = await User.findOne({ email: email});
+    console.log(user + "find ");
     if(!user || user.password !== password ){
         res.render('auth/login', 
         {

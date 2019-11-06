@@ -1,5 +1,7 @@
 // get Model for User Controller 
 var User = require("../models/user.model");
+var md5 = require('md5');
+
 //use this file as a controller 
 module.exports.index = async  (req,res)=> {
     var users = await User.find();
@@ -28,9 +30,10 @@ module.exports.create = (req,res)=>{
 };
 module.exports.createP = async(req,res)=>{
    req.body.avatar = req.file.path.split('\\').slice(1).join('/');
+   var password = md5(req.body.password);
     var user = new User({
         email: req.body.email,
-        password: req.body.password,
+        password: password ,
         name: req.body.name,
         avatar: req.body.avatar,
         phone: req.body.phone
